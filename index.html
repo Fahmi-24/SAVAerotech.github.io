@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAV Aerotech | Advanced Aerial Rescue</title>
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="video-bg">
+        <video autoplay muted loop playsinline>
+            <source src="https://cdn.pixabay.com/video/2019/05/20/23769-338272583_large.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <header class="header">
+        <a href="#" class="logo">SAV <span class="cyan">AEROTECH</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Mission</a>
+            <a href="#problem">The Reality</a>
+            <a href="#tech">Technology</a>
+            <a href="#demo">Live Demo</a>
+            <a href="#analysis">Analysis</a> <a href="#specs">Blueprint</a>
+            <a href="#impact">Impact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3 class="glitch-text">ADVANCED DISASTER RESPONSE</h3>
+            <h1>BELUM TURUN,<br>KORBAN SUDAH <span class="cyan">KETAHUAN.</span></h1>
+            <p>Revolusi SAR udara berbasis AI Voice Command & Thermal Vision. Saat darat lumpuh, kami datang dari langit. Tanpa remote rumit, cukup perintah suara.</p>
+            <div class="btn-group">
+                <a href="#tech" class="btn">Initiate System</a>
+                <a href="#specs" class="btn outline">View Specs</a>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="hud-ring"></div>
+            
+            <div class="floating-wrapper">
+                <img src="images/logo.png" alt="SAV Team Logo" id="hero-logo">
+            </div>
+            
+            <div class="floating-data">
+                <div class="data-row"><span class="label">ALT</span> <span class="val">38.000 FT</span></div>
+                <div class="data-row"><span class="label">BAT</span> <span class="val">98%</span></div>
+                <div class="data-row"><span class="label">STS</span> <span class="val cyan">STANDBY</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="problem">
+        <div class="about-img">
+            <img src="images/banjir-kayu.jpg" alt="Banjir Sumatra"> 
+            <div class="img-overlay">
+                <h4>DATA_LOG: SUMATRA</h4>
+                <p>ACCESS BLOCKED</p>
+            </div>
+        </div>
+        <div class="about-content">
+            <h2 class="heading">SAAT DARAT <span class="red">LUMPUH</span></h2>
+            <h3>Logistik Mati. Waktu Habis.</h3>
+            <p>Banjir bandang membawa kayu gelondongan. Perahu karet terbalik, helikopter punya <i>blind spot</i>. Korban butuh kepastian, bukan sekadar percobaan. SAV hadir mengisi celah kematian ini dengan presisi robotik.</p>
+            <div class="stats-box">
+                <div>
+                    <h2>90%</h2>
+                    <p>Akses Terputus</p>
+                </div>
+                <div>
+                    <h2>2Jam</h2>
+                    <p>Golden Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="tech">
+        <h2 class="heading">THE <span class="cyan">ARSENAL</span></h2>
+        <p class="sub-heading">Life-Saving Technology</p>
+        
+        <div class="services-container">
+            <div class="services-box glass">
+                <i class='bx bx-microphone'></i>
+                <h3>Hands-Free</h3>
+                <p>Pilot kami adalah suara Anda. Didukung <b>OpenAI Whisper</b>, cukup teriak "Cari di Sektor B", drone langsung patuh.</p>
+            </div>
+
+            <div class="services-box glass">
+                <i class='bx bx-radar'></i>
+                <h3>Night Eagle Eye</h3>
+                <p>Gelap gulita? Tertutup pohon? Kamera <b>FLIR Duo Pro R</b> mendeteksi panas tubuh korban dari ketinggian.</p>
+            </div>
+
+            <div class="services-box glass">
+                <i class='bx bxs-package'></i>
+                <h3>Life Courier</h3>
+                <p>Bukan cuma melihat, tapi menolong. Sistem servo presisi menjatuhkan 3KG obat/selimut tepat di titik koordinat.</p>
+            </div>
+            
+            <div class="services-box glass">
+                <i class='bx bxs-plane-alt'></i>
+                <h3>Hybrid VTOL</h3>
+                <p>Lepas landas vertikal di gang sempit seperti helikopter, melesat jauh dan irit seperti pesawat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo" id="demo">
+        <h2 class="heading">MISSION <span class="cyan">LOGS</span></h2>
+        <p class="sub-heading">Live Telemetry & Flight Tests</p>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-label">CAM_01: VTOL TEST</div>
+                <video autoplay muted loop playsinline>
+                    <source src="images/video1.mp4" type="video/mp4">
+                </video>
+                <div class="hud-corner top-left"></div>
+                <div class="hud-corner bottom-right"></div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-label">CAM_02: TRANSITION</div>
+                <video autoplay muted loop playsinline>
+                    <source src="images/video2.mp4" type="video/mp4">
+                </video>
+                <div class="hud-corner top-left"></div>
+                <div class="hud-corner bottom-right"></div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-label">CAM_03: AI DETECT</div>
+                <video autoplay muted loop playsinline>
+                    <source src="images/video3.mp4" type="video/mp4">
+                </video>
+                <div class="hud-corner top-left"></div>
+                <div class="hud-corner bottom-right"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="performance" id="analysis">
+        <h2 class="heading">SYSTEM <span class="cyan">ANALYSIS</span></h2>
+        <p class="sub-heading">Data Perhitungan Aerodinamika & Panel Surya</p>
+
+        <div class="analysis-container">
+            <div class="data-card glass">
+                <h3><i class='bx bx-data'></i> TECHNICAL DATA SHEET</h3>
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>PARAMETER</th>
+                            <th>VALUE</th>
+                            <th>UNIT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>MTOW</td><td class="num">10</td><td>kg</td></tr>
+                        <tr><td>Kecepatan Jelajah</td><td class="num">16</td><td>m/s</td></tr>
+                        <tr><td>Daya Jelajah (Tanpa Solar)</td><td class="num">307</td><td>Watt</td></tr>
+                        <tr><td>Output Surya (Rata-rata)</td><td class="num cyan">90</td><td>Watt</td></tr>
+                        <tr><td>Beban Baterai (Hybrid)</td><td class="num">217</td><td>Watt</td></tr>
+                        <tr class="highlight"><td>TOTAL ENDURANCE</td><td class="num">78</td><td>Mins</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="data-card glass">
+                <h3><i class='bx bx-calculator'></i> MISSION SIMULATOR</h3>
+                <p class="calc-note">Simulasi konsumsi daya berdasarkan mode terbang.</p>
+                <div class="calculator-box">
+                    <div class="input-group">
+                        <label>Flight Mode:</label>
+                        <select id="flightMode" onchange="calculateMission()">
+                            <option value="cruise">Fixed Wing (Cruise)</option>
+                            <option value="hover">Multirotor (Hover)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Solar Panel Assist:</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="solarSwitch" onchange="calculateMission()" checked>
+                            <label for="solarSwitch" class="switch-label"></label>
+                        </div>
+                    </div>
+                    <div class="calc-result">
+                        <div class="res-item">
+                            <span>POWER CONSUMPTION</span>
+                            <h2 id="resPower">217 W</h2>
+                        </div>
+                        <div class="res-item">
+                            <span>EST. FLIGHT TIME</span>
+                            <h2 id="resTime" class="cyan">78 Min</h2>
+                        </div>
+                    </div>
+                    <div class="calc-info">
+                        <small>*Efisiensi Sistem Surya: 85.5%</small><br>
+                        <small>*Area Panel Efektif: 0.75 m²</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portofolio" id="specs">
+        <h2 class="heading">TECHNICAL <span class="cyan">BLUEPRINT</span></h2>
+        
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h4>ENDURANCE</h4>
+                <h2>78 <span class="small">Mins</span></h2>
+                <p>With Solar Panel Assist</p>
+            </div>
+            <div class="spec-card">
+                <h4>RANGE</h4>
+                <h2>16 <span class="small">KM</span></h2>
+                <p>Anti-Lost Signal Tracker</p>
+            </div>
+            <div class="spec-card">
+                <h4>PAYLOAD</h4>
+                <h2>3 <span class="small">KG</span></h2>
+                <p>Emergency Medical Kit</p>
+            </div>
+            <div class="spec-card">
+                <h4>AI CORE</h4>
+                <h2>GPT-4</h2>
+                <p>Natural Language Processing</p>
+            </div>
+        </div>
+
+        <div class="drone-showcase">
+            <div class="showcase-item blueprint-box">
+                <h3>ORTHOGRAPHIC VIEW</h3>
+                <img src="images/sav-blueprint.png" alt="Technical Blueprint">
+            </div>
+
+            <div class="showcase-item render-box">
+                <h3>3D RENDER UNIT</h3>
+                <img src="images/sav-drone-render.png" alt="SAV Drone Unit">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="impact">
+        <div class="footer-text">
+            <h3>SAV AEROTECH</h3>
+            <p>Innovative Support for Autonomous Aerial Logistics.</p>
+            <p>&copy; 2026 Fahmi Islami Putra & Team | Sebelas Maret University.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+</html>
