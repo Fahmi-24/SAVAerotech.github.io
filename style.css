@@ -248,12 +248,26 @@ section {
 /* Lingkaran HUD */
 .hud-ring {
     position: absolute;
-    width: 450px;
-    height: 450px;
-    border: 1px dashed rgba(0, 242, 234, 0.2);
+    
+    /* --- KUNCI PERBAIKAN --- */
+    /* Pastikan width dan height angkanya SAMA PERSIS */
+    width: 400px;  
+    height: 400px; 
+    
+    /* Pastikan border-radius 50% */
     border-radius: 50%;
+    
+    /* Garis putus-putus */
+    border: 1px dashed rgba(0, 242, 234, 0.2);
+    
+    /* Posisi di tengah */
     z-index: 1;
+    
+    /* Animasi putar */
     animation: rotateHUD 30s linear infinite;
+    
+    /* Tambahan: Mencegah 'gepeng' di layar kecil */
+    flex-shrink: 0; 
 }
 
 @keyframes rotateHUD {
@@ -428,7 +442,38 @@ section {
 .top-left { top: -2px; left: -2px; border-right: none; border-bottom: none; }
 .bottom-right { bottom: -2px; right: -2px; border-left: none; border-top: none; }
 
-/* --- PERFORMANCE ANALYSIS SECTION (Baru) --- */
+/* --- TAMBAHAN: Voice Command Visualizer --- */
+.voice-wave {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 3px;
+    height: 20px;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.voice-wave span {
+    width: 3px;
+    background: var(--main-color);
+    animation: wave 1s infinite ease-in-out;
+    box-shadow: 0 0 5px var(--main-color);
+}
+
+.voice-wave span:nth-child(1) { height: 10px; animation-delay: 0.1s; }
+.voice-wave span:nth-child(2) { height: 20px; animation-delay: 0.2s; }
+.voice-wave span:nth-child(3) { height: 15px; animation-delay: 0.3s; }
+.voice-wave span:nth-child(4) { height: 25px; animation-delay: 0.4s; }
+.voice-wave span:nth-child(5) { height: 12px; animation-delay: 0.5s; }
+
+@keyframes wave {
+    0%, 100% { transform: scaleY(1); opacity: 0.5; }
+    50% { transform: scaleY(1.5); opacity: 1; }
+}
+
+
+/* --- PERFORMANCE ANALYSIS SECTION --- */
 .analysis-container {
     display: flex;
     justify-content: center;
