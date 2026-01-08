@@ -40,8 +40,8 @@ window.addEventListener('scroll', () => {
 /*==================== Scroll Reveal (Animasi Muncul) ====================*/
 const sr = ScrollReveal({
     distance: '80px',
-    duration: 2000,
-    delay: 200,
+    duration: 800,
+    delay: 100,
     reset: true
 });
 
@@ -114,4 +114,5 @@ function calculateMission() {
 
 // Jalankan fungsi sekali saat website pertama kali dibuka
 // Agar angka di kalkulator tidak kosong
+
 calculateMission();
