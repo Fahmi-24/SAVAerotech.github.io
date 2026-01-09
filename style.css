@@ -92,7 +92,7 @@ section {
     border-bottom: var(--border-glass);
 }
 
-/* --- STYLE LOGO HEADER BARU (Teks Kiri, Logo Kanan) --- */
+/* --- STYLE LOGO HEADER (Teks Kiri, Logo Kanan) --- */
 .logo {
     display: flex;
     align-items: center;
@@ -106,7 +106,6 @@ section {
     font-weight: 800;
     letter-spacing: 2px;
     font-family: 'Orbitron', sans-serif;
-    /* Memberi garis batas di kanan teks untuk memisahkan dengan logo */
     padding-right: 1.5rem;
     border-right: 2px solid #333; 
 }
@@ -114,10 +113,9 @@ section {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Jarak antar logo SAV dan UNS */
+    gap: 1rem;
 }
 
-/* Ukuran Logo Kecil di Header */
 .logo-container img {
     height: 45px;
     width: auto;
@@ -130,7 +128,6 @@ section {
     filter: drop-shadow(0 0 10px var(--main-color));
 }
 
-/* Garis Tipis Antara Logo SAV dan UNS */
 .line-sep {
     width: 1px;
     height: 25px;
@@ -245,7 +242,7 @@ section {
     color: #000;
 }
 
-/* --- HERO VISUAL (LOGO BESAR INTERAKTIF) --- */
+/* --- HERO VISUAL --- */
 .hero-visual {
     position: relative;
     width: 45%;
@@ -260,7 +257,6 @@ section {
     z-index: 2;
 }
 
-/* GAYA LOGO BESAR (Sepia Mode - Default) */
 #hero-logo {
     width: 350px;
     height: auto;
@@ -270,7 +266,6 @@ section {
     cursor: pointer;
 }
 
-/* SAAT DISENTUH KURSOR (Warna Asli) */
 #hero-logo:hover {
     filter: sepia(0%) contrast(100%) brightness(100%) drop-shadow(0 0 40px rgba(0, 242, 234, 0.6));
     opacity: 1;
@@ -282,7 +277,6 @@ section {
     50% { transform: translateY(-20px); }
 }
 
-/* Lingkaran HUD */
 .hud-ring {
     position: absolute;
     width: 400px;  
@@ -299,7 +293,6 @@ section {
     to { transform: rotate(360deg); }
 }
 
-/* Data Status Kecil */
 .floating-data {
     position: absolute;
     right: 0;
@@ -322,7 +315,7 @@ section {
 .data-row .label { color: #888; }
 .data-row .val { font-weight: bold; color: #fff; }
 
-/* --- PROBLEM / ABOUT SECTION --- */
+/* --- PROBLEM SECTION --- */
 .about {
     display: flex;
     justify-content: center;
@@ -398,7 +391,7 @@ section {
 .services-box h3 { font-size: 2.2rem; margin-bottom: 1.5rem; }
 .services-box p { font-size: 1.5rem; color: #ccc; }
 
-/* --- DEMO SECTION (GRID VIDEO) --- */
+/* --- DEMO SECTION --- */
 .demo {
     text-align: center;
     background: linear-gradient(to bottom, transparent, rgba(0, 242, 234, 0.05), transparent);
@@ -466,7 +459,7 @@ section {
 .top-left { top: -2px; left: -2px; border-right: none; border-bottom: none; }
 .bottom-right { bottom: -2px; right: -2px; border-left: none; border-top: none; }
 
-/* --- Voice Command Visualizer --- */
+/* Voice Wave Animation */
 .voice-wave {
     position: absolute;
     bottom: 15px;
@@ -496,7 +489,7 @@ section {
     50% { transform: scaleY(1.5); opacity: 1; }
 }
 
-/* --- PERFORMANCE ANALYSIS SECTION --- */
+/* --- PERFORMANCE ANALYSIS --- */
 .analysis-container {
     display: flex;
     justify-content: center;
@@ -530,7 +523,6 @@ section {
     letter-spacing: 1px;
 }
 
-/* Tabel Data */
 .tech-table {
     width: 100%;
     border-collapse: collapse;
@@ -565,7 +557,6 @@ section {
     background: rgba(0, 242, 234, 0.05);
 }
 
-/* Kalkulator & Input */
 .input-group { margin-bottom: 2rem; }
 .input-group label { display: block; font-size: 1.3rem; margin-bottom: 0.8rem; color: #aaa; }
 
@@ -593,7 +584,7 @@ select {
 .calc-info { margin-top: 2rem; font-size: 1.2rem; color: #555; line-height: 1.6; }
 
 
-/* Toggle Switch Container */
+/* --- TOGGLE SWITCH (SMOOTH VERSION) --- */
 .toggle-switch {
     position: relative;
     width: 60px;
@@ -604,7 +595,7 @@ select {
     display: none;
 }
 
-/* Track (Latar Belakang) */
+/* Track */
 .switch-label {
     position: absolute;
     cursor: pointer;
@@ -612,47 +603,39 @@ select {
     background-color: #333;
     border-radius: 34px;
     transition: background-color 0.3s ease;
-    /* Tambahan: Border tipis biar rapi di background gelap */
     border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-/* Knob (Lingkaran Putih) */
+/* Knob (Bola Putih) */
 .switch-label::before {
     content: "";
     position: absolute;
     width: 22px;
     height: 22px;
-    left: 4px; /* Jarak tetap dari kiri */
-    top: 50%;  /* Posisi tengah vertikal */
-    
+    left: 4px;
+    top: 50%;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Tambah bayangan biar timbul */
-
-    /* KUNCI SMOOTH: */
-    /* 1. Gunakan translate untuk posisi awal (0, -50%) */
-    transform: translate(0, -50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     
-    /* 2. Gunakan Cubic Bezier untuk efek "gas-rem" yang halus */
+    /* Menggunakan Transform untuk animasi smooth */
+    transform: translate(0, -50%);
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
-/* --- STATE ON (CHECKED) --- */
-
+/* State ON */
 input:checked + .switch-label {
     background-color: var(--main-color);
-    box-shadow: 0 0 10px var(--main-color); /* Efek Glow saat ON */
+    box-shadow: 0 0 10px var(--main-color);
     border-color: transparent;
 }
 
 input:checked + .switch-label::before {
-    /* Kalkulasi Jarak Pindah:
-       Width (60) - Knob (22) - Padding Kiri (4) - Padding Kanan (4) = 30px 
-    */
     transform: translate(30px, -50%);
 }
 
-/* --- BLUEPRINT / SPECS SECTION --- */
+
+/* --- SPECS SECTION --- */
 .portofolio { background: transparent; padding-bottom: 5rem; }
 .specs-grid {
     display: grid;
@@ -672,7 +655,7 @@ input:checked + .switch-label::before {
 .spec-card h2 { font-size: 4rem; color: var(--text-color); margin: 1rem 0; }
 .spec-card .small { font-size: 1.5rem; color: var(--main-color); }
 
-/* Drone Showcase (Blueprint & Render) */
+/* Drone Showcase */
 .drone-showcase {
     width: 100%;
     display: flex;
@@ -701,7 +684,7 @@ input:checked + .switch-label::before {
     opacity: 0.8;
 }
 
-/* Gambar Blueprint (Kiri) */
+/* Blueprint */
 .blueprint-box img {
     width: 100%;
     transform: scale(1.35);
@@ -719,7 +702,7 @@ input:checked + .switch-label::before {
     transform: scale(1.4);
 }
 
-/* Gambar Render 3D (Kanan) */
+/* Render Unit */
 .render-box img {
     width: 100%;
     transform: scale(1.4) translateY(10px);
@@ -730,6 +713,18 @@ input:checked + .switch-label::before {
 @keyframes floatDrone {
     0%, 100% { transform: scale(1.4) translateY(10px); }
     50% { transform: scale(1.4) translateY(-15px); }
+}
+
+/* --- Antenna Tracker Style (Ditambahkan) --- */
+.tracker-box img {
+    width: 80%;
+    filter: drop-shadow(0 0 20px rgba(255, 42, 109, 0.4)); /* Glow Merah */
+    animation: pulseTracker 3s infinite ease-in-out;
+}
+
+@keyframes pulseTracker {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(255, 42, 109, 0.4)); }
+    50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(255, 42, 109, 0.8)); }
 }
 
 /* --- FOOTER --- */
@@ -789,4 +784,7 @@ input:checked + .switch-label::before {
     .logo-text { font-size: 1.8rem; padding-right: 1rem; }
     .logo-container img { height: 30px; }
     .logo { gap: 1rem; }
+
+    /* Responsive untuk Antenna Tracker */
+    .tracker-box img { width: 60%; }
 }
