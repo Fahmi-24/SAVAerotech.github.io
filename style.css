@@ -680,7 +680,14 @@ input:checked + .switch-label::before {
     font-size: 1.4rem;
     color: var(--main-color);
     letter-spacing: 2px;
-    margin-bottom: 2rem;
+    
+    /* --- PERBAIKAN POSISI --- */
+    /* 1. Memberi jarak lebih jauh dengan gambar di bawahnya */
+    margin-bottom: 4rem; 
+    
+    /* 2. Mengangkat teks ke atas secara fisik */
+    transform: translateY(-20px); 
+    
     opacity: 0.8;
 }
 
